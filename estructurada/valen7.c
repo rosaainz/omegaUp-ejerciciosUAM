@@ -2,12 +2,8 @@
 
 int main(){
   int a,b;
-  int contador = 0;
   scanf("%d%d", &a, &b);
 
-  contador += (a == 7);
-  contador += (b == 7);
-
-  printf("%d", contador);
+  printf("%d", (a==7) + (b==7));
   return 0;
 }
