@@ -5,13 +5,15 @@ int main(){
 
   scanf("%d", &t);
 
-  if(t <= 21 && t >= 15){
-    printf("fria!");
-  }else if(t >= 21 && t <= 29){
-    printf("tibia");
-  }else if(t >= 29 && t <= 34){
-    printf("caliente!");
-  }else{
+  if(t < 21 ){
+    printf("fria!\n");
+  }else if(t > 21 && t < 29){
+    printf("tibia\n");
+  }else if(t > 29 ){
+    printf("caliente!\n");
+  }
+
+  if( t < 15 || t > 34){
     printf("RIP escamitas :(");
   }
 
