@@ -6,7 +6,7 @@ int main(){
   scanf("%d", &n);
 
   for(int a=1; a<=n; a+=2){
-    for(int i=1; i<=1; i++){
+    for(int i=1; i<=a; i++){
       printf("@");
     }
     printf("\n");
