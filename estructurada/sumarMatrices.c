@@ -1,20 +1,27 @@
 #include<stdio.h>
 
 int main(){
-  int a,b;
-  scanf("%d%d", &a, &b);
+  int n;
+  scanf("%d", &n);
 
-  int matriz[a][b];
-  for(int i=0; i<a; ++i){
-    for(int j=0; j<b; ++j){
+  int matriz[n][n];
+  for(int i=0; i<n; ++i){
+    for(int j=0; j<n; ++j){
       scanf("%d", &matriz[i][j]);
     }
   }
 
+  int matriz1[n][n];
+  for(int i=0; i<n; ++i){
+    for(int j=0; j<n; ++j){
+      scanf("%d", &matriz1[i][j]);
+    }
+  }
 
-  for(int i=0; i<a; ++i){
-    for(int j=0; j<b; ++j){
-      printf("%d", matriz[i][j]);
+
+  for(int i=0; i<n; ++i){
+    for(int j=0; j<n; ++j){
+      printf("%d", matriz[i][j] + matriz1[i][j]);
     }
     printf("\n");
   }
