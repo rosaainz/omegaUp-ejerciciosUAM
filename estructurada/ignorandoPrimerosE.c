@@ -12,13 +12,23 @@ void imprimeArreglo(int n, int arr[]){
   }
 }
 
+void ignoraKelementos(int k, int n, int arr[]){
+  if(k<n){
+    for(int i=k; i<n; i++){
+    printf("%d", arr[i]);
+    }
+  }
+}
+
+
 int main(){
   int n=0, k;
   scanf("%d", &n);
 
-  int arr[] = {};
+  int arr[n];
   llenaArreglo(n, arr);
-  imprimeArreglo(n, arr);
 
+  scanf("%d", &k);
+  ignoraKelementos(k,n,arr);
   return 0;
 }
