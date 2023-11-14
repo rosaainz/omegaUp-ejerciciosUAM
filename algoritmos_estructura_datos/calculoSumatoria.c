@@ -3,12 +3,6 @@
 int main(){
   int n;
   scanf("%d", &n);
-
-  long long res=0;
-  for(int i=0; i<=n; ++i){
-    res+=i;
-  }
-
-  printf("%lld", res);
+  printf("%lld", (n * (n +1LL))/2 );
   return 0;
 }
