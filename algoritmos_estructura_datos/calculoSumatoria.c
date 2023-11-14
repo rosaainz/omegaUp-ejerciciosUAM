@@ -4,11 +4,11 @@ int main(){
   int n;
   scanf("%d", &n);
 
-  int res=0;
+  long long res=0;
   for(int i=0; i<=n; ++i){
     res+=i;
   }
 
-  printf("%d", res);
+  printf("%lld", res);
   return 0;
 }
