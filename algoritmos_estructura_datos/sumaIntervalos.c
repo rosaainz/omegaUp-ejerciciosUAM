@@ -4,15 +4,12 @@ int main(){
   int n;
   scanf("%d", &n);
 
-  int arr[100000];
+  int prefijo[100000], acum=0;
   for(int i=0; i<n; ++i){
-    scanf("%d", &arr[i]);
-  }
-
-  int prefijo[100000];
-  prefijo[0] = arr[0];
-  for(int i=1; i<n; ++i){
-    prefijo[i] = prefijo[i-1] + arr[i];
+    int actual;
+    scanf("%d", &actual);
+    acum += actual;
+    prefijo[i] = acum;
   }
 
   int m;
@@ -22,10 +19,6 @@ int main(){
     int ini, fin;
     scanf("%d%d", &ini, &fin);
 
-    if(ini == 0){
-      printf("%d\n", prefijo[fin]);
-    }else{
-      printf("%d\n", prefijo[fin] - prefijo[ini-1]);
-    }
+    printf("%d\n", prefijo[fin] - (ini == 0 ? 0 : prefijo[ini-1]));
   }
 }
