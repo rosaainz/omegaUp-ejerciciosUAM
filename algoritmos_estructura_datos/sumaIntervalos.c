@@ -9,17 +9,23 @@ int main(){
     scanf("%d", &arr[i]);
   }
 
-  int m; //intervalos que nos daran
+  int prefijo[100000];
+  prefijo[0] = arr[0];
+  for(int i=1; i<n; ++i){
+    prefijo[i] = prefijo[i-1] + arr[i];
+  }
+
+  int m;
   scanf("%d", &m);
 
   for(int i=0; i<m; ++i){
-    int ini,fin;
-    scanf("%d%d", &ini,  &fin);
+    int ini, fin;
+    scanf("%d%d", &ini, &fin);
 
-    int res=0;
-    for(int i=ini; i<=fin; ++i){
-      res+=arr[i];
+    if(ini == 0){
+      printf("%d\n", prefijo[fin]);
+    }else{
+      printf("%d\n", prefijo[fin] - prefijo[ini-1]);
     }
-    printf("%d\n", res);
   }
 }
