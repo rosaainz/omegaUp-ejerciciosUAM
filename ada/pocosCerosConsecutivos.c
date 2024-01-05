@@ -1,19 +1,21 @@
 #include<stdio.h>
 
-int cadenasPosibles(int longCadena, int cerosAtras){
-  if(longCadena == 0){
+int cadenasPosibles(int longCadena){
+  if (longCadena == 0){
     return 1;
-  }else if(cerosAtras == 2){
-    return cadenasPosibles(longCadena-1, 0);
-  }else
-    return cadenasPosibles(longCadena-1, 0) + cadenasPosibles(longCadena-1, cerosAtras+1);
+  }else if (longCadena == 1){
+    return 2;
+  }else if (longCadena == 2){
+    return 4;
+  }else{
+    return cadenasPosibles(longCadena-1) + cadenasPosibles(longCadena-2) + cadenasPosibles(longCadena-3);
+  }
 }
-
 
 
 int main(){
   int n;
   scanf("%d", &n);
-  printf("%d", cadenasPosibles(n, 0));
+  printf("%d", cadenasPosibles(n));
   return 0;
 }
