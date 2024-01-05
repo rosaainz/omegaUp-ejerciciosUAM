@@ -1,7 +1,12 @@
 #include<stdio.h>
+#include<math.h>
 
 int numTransiciones(int n){
-  return n;
+  if( n == 0 || n == 1)
+    return 0;
+  else{
+    return 2 * numTransiciones(n-1) + pow(2, n-1);
+  }
 }
 
 
