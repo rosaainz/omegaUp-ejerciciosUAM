@@ -3,8 +3,10 @@
 int cadenasPosibles(int longCadena, int cerosAtras){
   if(longCadena == 0){
     return 1;
+  }else if(cerosAtras == 2){
+    return cadenasPosibles(longCadena-1, 0);
   }else
-    return 0;
+    return cadenasPosibles(longCadena-1, 0) + cadenasPosibles(longCadena-1, cerosAtras+1);
 }
 
 
