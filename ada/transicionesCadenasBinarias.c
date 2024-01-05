@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 
-int numTransiciones(int n){
+long long  numTransiciones(int n){
   if( n == 0 || n == 1)
     return 0;
   else{
@@ -14,6 +14,6 @@ int numTransiciones(int n){
 int main(){
   int n;
   scanf("%d", &n);
-  printf("%d", numTransiciones(n));
+  printf("%lld", numTransiciones(n));
   return 0;
 }
